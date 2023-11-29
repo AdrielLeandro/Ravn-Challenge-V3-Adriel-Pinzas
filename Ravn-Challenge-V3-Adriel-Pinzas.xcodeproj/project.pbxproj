@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D24FF7E32B1805A400795D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7E22B1805A400795D83 /* AppDelegate.swift */; };
+		D24FF7E52B1805A400795D83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7E42B1805A400795D83 /* SceneDelegate.swift */; };
+		D24FF7E72B1805A400795D83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7E62B1805A400795D83 /* ViewController.swift */; };
+		D24FF7EA2B1805A400795D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24FF7E82B1805A400795D83 /* Main.storyboard */; };
+		D24FF7EC2B1805A600795D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24FF7EB2B1805A600795D83 /* Assets.xcassets */; };
+		D24FF7EF2B1805A600795D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */; };
+		D24FF7FA2B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7F92B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift */; };
+		D24FF8042B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8032B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift */; };
+		D24FF8062B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8052B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D24FF7F62B1805A600795D83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D24FF7D72B1805A400795D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D24FF7DE2B1805A400795D83;
+			remoteInfo = "Ravn-Challenge-V3-Adriel-Pinzas";
+		};
+		D24FF8002B1805A600795D83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D24FF7D72B1805A400795D83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D24FF7DE2B1805A400795D83;
+			remoteInfo = "Ravn-Challenge-V3-Adriel-Pinzas";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D24FF7DF2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ravn-Challenge-V3-Adriel-Pinzas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24FF7E22B1805A400795D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D24FF7E42B1805A400795D83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D24FF7E62B1805A400795D83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D24FF7E92B1805A400795D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D24FF7EB2B1805A600795D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D24FF7EE2B1805A600795D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D24FF7F02B1805A600795D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D24FF7F52B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ravn-Challenge-V3-Adriel-PinzasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24FF7F92B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ravn_Challenge_V3_Adriel_PinzasTests.swift; sourceTree = "<group>"; };
+		D24FF7FF2B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ravn-Challenge-V3-Adriel-PinzasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D24FF8032B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ravn_Challenge_V3_Adriel_PinzasUITests.swift; sourceTree = "<group>"; };
+		D24FF8052B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D24FF7DC2B1805A400795D83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24FF7F22B1805A600795D83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24FF7FC2B1805A600795D83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D24FF7D62B1805A400795D83 = {
+			isa = PBXGroup;
+			children = (
+				D24FF7E12B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */,
+				D24FF7F82B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests */,
+				D24FF8022B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests */,
+				D24FF7E02B1805A400795D83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D24FF7E02B1805A400795D83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF7DF2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas.app */,
+				D24FF7F52B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests.xctest */,
+				D24FF7FF2B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D24FF7E12B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF7E22B1805A400795D83 /* AppDelegate.swift */,
+				D24FF7E42B1805A400795D83 /* SceneDelegate.swift */,
+				D24FF7E62B1805A400795D83 /* ViewController.swift */,
+				D24FF7E82B1805A400795D83 /* Main.storyboard */,
+				D24FF7EB2B1805A600795D83 /* Assets.xcassets */,
+				D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */,
+				D24FF7F02B1805A600795D83 /* Info.plist */,
+			);
+			path = "Ravn-Challenge-V3-Adriel-Pinzas";
+			sourceTree = "<group>";
+		};
+		D24FF7F82B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF7F92B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift */,
+			);
+			path = "Ravn-Challenge-V3-Adriel-PinzasTests";
+			sourceTree = "<group>";
+		};
+		D24FF8022B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8032B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift */,
+				D24FF8052B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift */,
+			);
+			path = "Ravn-Challenge-V3-Adriel-PinzasUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D24FF7DE2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24FF8092B1805A600795D83 /* Build configuration list for PBXNativeTarget "Ravn-Challenge-V3-Adriel-Pinzas" */;
+			buildPhases = (
+				D24FF7DB2B1805A400795D83 /* Sources */,
+				D24FF7DC2B1805A400795D83 /* Frameworks */,
+				D24FF7DD2B1805A400795D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ravn-Challenge-V3-Adriel-Pinzas";
+			productName = "Ravn-Challenge-V3-Adriel-Pinzas";
+			productReference = D24FF7DF2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D24FF7F42B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24FF80C2B1805A600795D83 /* Build configuration list for PBXNativeTarget "Ravn-Challenge-V3-Adriel-PinzasTests" */;
+			buildPhases = (
+				D24FF7F12B1805A600795D83 /* Sources */,
+				D24FF7F22B1805A600795D83 /* Frameworks */,
+				D24FF7F32B1805A600795D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D24FF7F72B1805A600795D83 /* PBXTargetDependency */,
+			);
+			name = "Ravn-Challenge-V3-Adriel-PinzasTests";
+			productName = "Ravn-Challenge-V3-Adriel-PinzasTests";
+			productReference = D24FF7F52B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D24FF7FE2B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D24FF80F2B1805A600795D83 /* Build configuration list for PBXNativeTarget "Ravn-Challenge-V3-Adriel-PinzasUITests" */;
+			buildPhases = (
+				D24FF7FB2B1805A600795D83 /* Sources */,
+				D24FF7FC2B1805A600795D83 /* Frameworks */,
+				D24FF7FD2B1805A600795D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D24FF8012B1805A600795D83 /* PBXTargetDependency */,
+			);
+			name = "Ravn-Challenge-V3-Adriel-PinzasUITests";
+			productName = "Ravn-Challenge-V3-Adriel-PinzasUITests";
+			productReference = D24FF7FF2B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D24FF7D72B1805A400795D83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D24FF7DE2B1805A400795D83 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					D24FF7F42B1805A600795D83 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = D24FF7DE2B1805A400795D83;
+					};
+					D24FF7FE2B1805A600795D83 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = D24FF7DE2B1805A400795D83;
+					};
+				};
+			};
+			buildConfigurationList = D24FF7DA2B1805A400795D83 /* Build configuration list for PBXProject "Ravn-Challenge-V3-Adriel-Pinzas" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D24FF7D62B1805A400795D83;
+			productRefGroup = D24FF7E02B1805A400795D83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D24FF7DE2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */,
+				D24FF7F42B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasTests */,
+				D24FF7FE2B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D24FF7DD2B1805A400795D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24FF7EF2B1805A600795D83 /* LaunchScreen.storyboard in Resources */,
+				D24FF7EC2B1805A600795D83 /* Assets.xcassets in Resources */,
+				D24FF7EA2B1805A400795D83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24FF7F32B1805A600795D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24FF7FD2B1805A600795D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D24FF7DB2B1805A400795D83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24FF7E72B1805A400795D83 /* ViewController.swift in Sources */,
+				D24FF7E32B1805A400795D83 /* AppDelegate.swift in Sources */,
+				D24FF7E52B1805A400795D83 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24FF7F12B1805A600795D83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24FF7FA2B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24FF7FB2B1805A600795D83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24FF8062B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift in Sources */,
+				D24FF8042B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D24FF7F72B1805A600795D83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D24FF7DE2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */;
+			targetProxy = D24FF7F62B1805A600795D83 /* PBXContainerItemProxy */;
+		};
+		D24FF8012B1805A600795D83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D24FF7DE2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */;
+			targetProxy = D24FF8002B1805A600795D83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D24FF7E82B1805A400795D83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24FF7E92B1805A400795D83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24FF7EE2B1805A600795D83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D24FF8072B1805A600795D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D24FF8082B1805A600795D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D24FF80A2B1805A600795D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ravn-Challenge-V3-Adriel-Pinzas/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Ravn-Challenge-V3-Adriel-Pinzas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D24FF80B2B1805A600795D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ravn-Challenge-V3-Adriel-Pinzas/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Ravn-Challenge-V3-Adriel-Pinzas";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D24FF80D2B1805A600795D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Ravn-Challenge-V3-Adriel-PinzasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ravn-Challenge-V3-Adriel-Pinzas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ravn-Challenge-V3-Adriel-Pinzas";
+			};
+			name = Debug;
+		};
+		D24FF80E2B1805A600795D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Ravn-Challenge-V3-Adriel-PinzasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ravn-Challenge-V3-Adriel-Pinzas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ravn-Challenge-V3-Adriel-Pinzas";
+			};
+			name = Release;
+		};
+		D24FF8102B1805A600795D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Ravn-Challenge-V3-Adriel-PinzasUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ravn-Challenge-V3-Adriel-Pinzas";
+			};
+			name = Debug;
+		};
+		D24FF8112B1805A600795D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.test.Ravn-Challenge-V3-Adriel-PinzasUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ravn-Challenge-V3-Adriel-Pinzas";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D24FF7DA2B1805A400795D83 /* Build configuration list for PBXProject "Ravn-Challenge-V3-Adriel-Pinzas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24FF8072B1805A600795D83 /* Debug */,
+				D24FF8082B1805A600795D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24FF8092B1805A600795D83 /* Build configuration list for PBXNativeTarget "Ravn-Challenge-V3-Adriel-Pinzas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24FF80A2B1805A600795D83 /* Debug */,
+				D24FF80B2B1805A600795D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24FF80C2B1805A600795D83 /* Build configuration list for PBXNativeTarget "Ravn-Challenge-V3-Adriel-PinzasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24FF80D2B1805A600795D83 /* Debug */,
+				D24FF80E2B1805A600795D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D24FF80F2B1805A600795D83 /* Build configuration list for PBXNativeTarget "Ravn-Challenge-V3-Adriel-PinzasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D24FF8102B1805A600795D83 /* Debug */,
+				D24FF8112B1805A600795D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D24FF7D72B1805A400795D83 /* Project object */;
+}
