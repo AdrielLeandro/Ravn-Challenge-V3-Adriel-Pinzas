@@ -15,24 +15,26 @@ struct RequestError: Error, Codable {
 }
 
 protocol HomeServiceProtocol {
-    typealias launchesResult = Result<[GetLaunchesQuery.Data.Launch], Error>
+    typealias launchesResult = Result<[Launch], Error>
     func fetchLauches(completion: @escaping (launchesResult) -> Void)
 }
 
 final class HomeService: HomeServiceProtocol {
     private let apolloNetwork: ApolloNetwork
-    var launches = [GetLaunchesQuery.Data.Launch]()
     
     init(apolloNetwork: ApolloNetwork = ApolloNetwork.shared) {
         self.apolloNetwork = apolloNetwork
     }
     
     func fetchLauches(completion: @escaping (launchesResult) -> Void) {
-        apolloNetwork.apollo.fetch(query: GetLaunchesQuery()) { result in
+        apolloNetwork.apollo.fetch(query: GetLaunchesQuery(), cachePolicy: .returnCacheDataAndFetch) { result in
             switch result {
             case .success(let graphQLResult):
                 if let launchConnection = graphQLResult.data?.launches {
-                    let launches = launchConnection.compactMap( { $0 } )
+                    let launches = launchConnection.compactMap( { Launch(id: $0?.id ?? "",
+                                                                         missionName: $0?.mission_name ?? "",
+                                                                         launchDate: $0?.launch_date_local ?? "",
+                                                                         detail: $0?.details ?? "") } )
                     completion(.success(launches))
                 } else {
                     completion(.failure(RequestError(key: "json.parsing.error", message: "Parsing error")))

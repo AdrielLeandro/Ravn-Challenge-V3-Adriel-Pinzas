@@ -6,17 +6,16 @@
 //
 
 import Foundation
-import SpaceXAPI
 
 protocol SearchServiceProtocol {
-    func filterLaunches(_ launches: [GetLaunchesQuery.Data.Launch], using searchText: String) -> [GetLaunchesQuery.Data.Launch]
+    func filterLaunches(_ launches: [Launch], using searchText: String) -> [Launch]
 }
 
 final class SearchService: SearchServiceProtocol {
     
-    func filterLaunches(_ launches: [GetLaunchesQuery.Data.Launch], using searchText: String) -> [GetLaunchesQuery.Data.Launch] {
+    func filterLaunches(_ launches: [Launch], using searchText: String) -> [Launch] {
         let filtered = launches.filter { launch in
-            return searchText.isEmpty || launch.mission_name?.lowercased().range(of: searchText.lowercased()) != nil
+            return searchText.isEmpty || launch.missionName.lowercased().range(of: searchText.lowercased()) != nil
         }
         return filtered
     }

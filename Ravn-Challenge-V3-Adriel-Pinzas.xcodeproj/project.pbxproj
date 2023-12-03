@@ -23,11 +23,9 @@
 		D24FF8232B18390700795D83 /* Home+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8222B18390700795D83 /* Home+ViewModel.swift */; };
 		D24FF8262B183EE400795D83 /* HomeLaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8252B183EE400795D83 /* HomeLaunchTableViewCell.swift */; };
 		D24FF8372B185C9200795D83 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8362B185C9200795D83 /* HomeService.swift */; };
-		D24FF8392B18604F00795D83 /* Home+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8382B18604F00795D83 /* Home+Content.swift */; };
 		D24FF83B2B18613A00795D83 /* Home+Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF83A2B18613A00795D83 /* Home+Initializer.swift */; };
 		D24FF8482B194DB200795D83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D24FF84A2B194DB200795D83 /* Localizable.strings */; };
 		D24FF84E2B194F5500795D83 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF84D2B194F5500795D83 /* String+Extension.swift */; };
-		D24FF85A2B1AC21600795D83 /* HomeJson.json in Resources */ = {isa = PBXBuildFile; fileRef = D24FF8522B1991CA00795D83 /* HomeJson.json */; };
 		D24FF85E2B1ACA9200795D83 /* HomeNavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF85D2B1ACA9200795D83 /* HomeNavigationTitleView.swift */; };
 		D24FF8602B1AE82800795D83 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF85F2B1AE82800795D83 /* TableView+Extension.swift */; };
 		D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8612B1AF58E00795D83 /* SearchService.swift */; };
@@ -38,6 +36,7 @@
 		D24FF8702B1C1EB100795D83 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = D24FF86F2B1C1EB100795D83 /* schema.graphqls */; };
 		D24FF8752B1C1FCC00795D83 /* SpaceXAPI in Frameworks */ = {isa = PBXBuildFile; productRef = D24FF8742B1C1FCC00795D83 /* SpaceXAPI */; };
 		D24FF8772B1C203700795D83 /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8762B1C203700795D83 /* ApolloNetwork.swift */; };
+		D24FF87F2B1D244400795D83 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF87E2B1D244400795D83 /* Launch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,13 +77,11 @@
 		D24FF8222B18390700795D83 /* Home+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+ViewModel.swift"; sourceTree = "<group>"; };
 		D24FF8252B183EE400795D83 /* HomeLaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLaunchTableViewCell.swift; sourceTree = "<group>"; };
 		D24FF8362B185C9200795D83 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
-		D24FF8382B18604F00795D83 /* Home+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Content.swift"; sourceTree = "<group>"; };
 		D24FF83A2B18613A00795D83 /* Home+Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Initializer.swift"; sourceTree = "<group>"; };
 		D24FF8452B194D7400795D83 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D24FF8492B194DB200795D83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D24FF84B2B194DB600795D83 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D24FF84D2B194F5500795D83 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		D24FF8522B1991CA00795D83 /* HomeJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeJson.json; sourceTree = "<group>"; };
 		D24FF85D2B1ACA9200795D83 /* HomeNavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationTitleView.swift; sourceTree = "<group>"; };
 		D24FF85F2B1AE82800795D83 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
 		D24FF8612B1AF58E00795D83 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
@@ -94,6 +91,7 @@
 		D24FF86F2B1C1EB100795D83 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
 		D24FF8722B1C1F8D00795D83 /* SpaceXAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXAPI; sourceTree = "<group>"; };
 		D24FF8762B1C203700795D83 /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
+		D24FF87E2B1D244400795D83 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +176,8 @@
 		D24FF8122B18085000795D83 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D24FF8802B1D29EC00795D83 /* Manager */,
+				D24FF87D2B1D235B00795D83 /* Models */,
 				D24FF8322B18584B00795D83 /* Services */,
 			);
 			path = Core;
@@ -201,7 +201,6 @@
 				D24FF81C2B1828CC00795D83 /* HomeRouter.swift */,
 				D24FF8202B1838E700795D83 /* Home.swift */,
 				D24FF8222B18390700795D83 /* Home+ViewModel.swift */,
-				D24FF8382B18604F00795D83 /* Home+Content.swift */,
 				D24FF83A2B18613A00795D83 /* Home+Initializer.swift */,
 			);
 			path = Home;
@@ -258,7 +257,6 @@
 		D24FF8322B18584B00795D83 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D24FF84F2B1973EA00795D83 /* Mock */,
 				D24FF8362B185C9200795D83 /* HomeService.swift */,
 				D24FF8612B1AF58E00795D83 /* SearchService.swift */,
 				D24FF8762B1C203700795D83 /* ApolloNetwork.swift */,
@@ -291,14 +289,6 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		D24FF84F2B1973EA00795D83 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				D24FF8522B1991CA00795D83 /* HomeJson.json */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
 		D24FF86E2B1C1EB100795D83 /* graphql */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +311,21 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D24FF87D2B1D235B00795D83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF87E2B1D244400795D83 /* Launch.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D24FF8802B1D29EC00795D83 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,7 +440,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24FF85A2B1AC21600795D83 /* HomeJson.json in Resources */,
 				D24FF7EF2B1805A600795D83 /* LaunchScreen.storyboard in Resources */,
 				D24FF8652B1BFE9A00795D83 /* Color.xcassets in Resources */,
 				D24FF8482B194DB200795D83 /* Localizable.strings in Resources */,
@@ -478,12 +482,12 @@
 				D24FF8602B1AE82800795D83 /* TableView+Extension.swift in Sources */,
 				D24FF8232B18390700795D83 /* Home+ViewModel.swift in Sources */,
 				D24FF81A2B1828B700795D83 /* HomePresenter.swift in Sources */,
-				D24FF8392B18604F00795D83 /* Home+Content.swift in Sources */,
 				D24FF85E2B1ACA9200795D83 /* HomeNavigationTitleView.swift in Sources */,
 				D24FF8772B1C203700795D83 /* ApolloNetwork.swift in Sources */,
 				D24FF8372B185C9200795D83 /* HomeService.swift in Sources */,
 				D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */,
 				D24FF8212B1838E700795D83 /* Home.swift in Sources */,
+				D24FF87F2B1D244400795D83 /* Launch.swift in Sources */,
 				D24FF8182B1810C400795D83 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
