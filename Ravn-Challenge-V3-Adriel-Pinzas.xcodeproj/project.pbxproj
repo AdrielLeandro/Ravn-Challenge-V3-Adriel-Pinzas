@@ -9,13 +9,34 @@
 /* Begin PBXBuildFile section */
 		D24FF7E32B1805A400795D83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7E22B1805A400795D83 /* AppDelegate.swift */; };
 		D24FF7E52B1805A400795D83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7E42B1805A400795D83 /* SceneDelegate.swift */; };
-		D24FF7E72B1805A400795D83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7E62B1805A400795D83 /* ViewController.swift */; };
-		D24FF7EA2B1805A400795D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24FF7E82B1805A400795D83 /* Main.storyboard */; };
 		D24FF7EC2B1805A600795D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24FF7EB2B1805A600795D83 /* Assets.xcassets */; };
 		D24FF7EF2B1805A600795D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */; };
 		D24FF7FA2B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF7F92B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasTests.swift */; };
 		D24FF8042B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8032B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift */; };
 		D24FF8062B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8052B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift */; };
+		D24FF8162B1810A600795D83 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8152B1810A600795D83 /* HomeViewController.swift */; };
+		D24FF8182B1810C400795D83 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8172B1810C400795D83 /* HomeInteractor.swift */; };
+		D24FF81A2B1828B700795D83 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8192B1828B700795D83 /* HomePresenter.swift */; };
+		D24FF81D2B1828CC00795D83 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF81C2B1828CC00795D83 /* HomeRouter.swift */; };
+		D24FF81F2B1837A000795D83 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF81E2B1837A000795D83 /* HomeView.swift */; };
+		D24FF8212B1838E700795D83 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8202B1838E700795D83 /* Home.swift */; };
+		D24FF8232B18390700795D83 /* Home+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8222B18390700795D83 /* Home+ViewModel.swift */; };
+		D24FF8262B183EE400795D83 /* HomeLaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8252B183EE400795D83 /* HomeLaunchTableViewCell.swift */; };
+		D24FF82F2B1854DB00795D83 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF82E2B1854DB00795D83 /* HomeResponse.swift */; };
+		D24FF8312B1856F200795D83 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8302B1856F200795D83 /* Launch.swift */; };
+		D24FF8352B1859F200795D83 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8342B1859F200795D83 /* ServiceManager.swift */; };
+		D24FF8372B185C9200795D83 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8362B185C9200795D83 /* HomeService.swift */; };
+		D24FF8392B18604F00795D83 /* Home+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8382B18604F00795D83 /* Home+Content.swift */; };
+		D24FF83B2B18613A00795D83 /* Home+Initializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF83A2B18613A00795D83 /* Home+Initializer.swift */; };
+		D24FF8482B194DB200795D83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D24FF84A2B194DB200795D83 /* Localizable.strings */; };
+		D24FF84E2B194F5500795D83 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF84D2B194F5500795D83 /* String+Extension.swift */; };
+		D24FF8582B1AABCD00795D83 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8572B1AABCD00795D83 /* DataResponse.swift */; };
+		D24FF85A2B1AC21600795D83 /* HomeJson.json in Resources */ = {isa = PBXBuildFile; fileRef = D24FF8522B1991CA00795D83 /* HomeJson.json */; };
+		D24FF85E2B1ACA9200795D83 /* HomeNavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF85D2B1ACA9200795D83 /* HomeNavigationTitleView.swift */; };
+		D24FF8602B1AE82800795D83 /* TableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF85F2B1AE82800795D83 /* TableView+Extension.swift */; };
+		D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8612B1AF58E00795D83 /* SearchService.swift */; };
+		D24FF8652B1BFE9A00795D83 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24FF8642B1BFE9A00795D83 /* Color.xcassets */; };
+		D24FF8672B1C00B900795D83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8662B1C00B900795D83 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +60,6 @@
 		D24FF7DF2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ravn-Challenge-V3-Adriel-Pinzas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24FF7E22B1805A400795D83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D24FF7E42B1805A400795D83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D24FF7E62B1805A400795D83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D24FF7E92B1805A400795D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D24FF7EB2B1805A600795D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D24FF7EE2B1805A600795D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D24FF7F02B1805A600795D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +68,31 @@
 		D24FF7FF2B1805A600795D83 /* Ravn-Challenge-V3-Adriel-PinzasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ravn-Challenge-V3-Adriel-PinzasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D24FF8032B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ravn_Challenge_V3_Adriel_PinzasUITests.swift; sourceTree = "<group>"; };
 		D24FF8052B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D24FF8152B1810A600795D83 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D24FF8172B1810C400795D83 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		D24FF8192B1828B700795D83 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D24FF81C2B1828CC00795D83 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		D24FF81E2B1837A000795D83 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D24FF8202B1838E700795D83 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D24FF8222B18390700795D83 /* Home+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+ViewModel.swift"; sourceTree = "<group>"; };
+		D24FF8252B183EE400795D83 /* HomeLaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLaunchTableViewCell.swift; sourceTree = "<group>"; };
+		D24FF82E2B1854DB00795D83 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		D24FF8302B1856F200795D83 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		D24FF8342B1859F200795D83 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D24FF8362B185C9200795D83 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D24FF8382B18604F00795D83 /* Home+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Content.swift"; sourceTree = "<group>"; };
+		D24FF83A2B18613A00795D83 /* Home+Initializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+Initializer.swift"; sourceTree = "<group>"; };
+		D24FF8452B194D7400795D83 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D24FF8492B194DB200795D83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D24FF84B2B194DB600795D83 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D24FF84D2B194F5500795D83 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D24FF8522B1991CA00795D83 /* HomeJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeJson.json; sourceTree = "<group>"; };
+		D24FF8572B1AABCD00795D83 /* DataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
+		D24FF85D2B1ACA9200795D83 /* HomeNavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationTitleView.swift; sourceTree = "<group>"; };
+		D24FF85F2B1AE82800795D83 /* TableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Extension.swift"; sourceTree = "<group>"; };
+		D24FF8612B1AF58E00795D83 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		D24FF8642B1BFE9A00795D83 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		D24FF8662B1C00B900795D83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +143,11 @@
 		D24FF7E12B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */ = {
 			isa = PBXGroup;
 			children = (
-				D24FF7E22B1805A400795D83 /* AppDelegate.swift */,
-				D24FF7E42B1805A400795D83 /* SceneDelegate.swift */,
-				D24FF7E62B1805A400795D83 /* ViewController.swift */,
-				D24FF7E82B1805A400795D83 /* Main.storyboard */,
-				D24FF7EB2B1805A600795D83 /* Assets.xcassets */,
-				D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */,
-				D24FF7F02B1805A600795D83 /* Info.plist */,
+				D24FF83C2B18732B00795D83 /* Utilities */,
+				D24FF82A2B184E0600795D83 /* Resources */,
+				D24FF8272B184AC600795D83 /* Aplication */,
+				D24FF8122B18085000795D83 /* Core */,
+				D24FF8132B180CC100795D83 /* Scenes */,
 			);
 			path = "Ravn-Challenge-V3-Adriel-Pinzas";
 			sourceTree = "<group>";
@@ -125,6 +167,141 @@
 				D24FF8052B1805A600795D83 /* Ravn_Challenge_V3_Adriel_PinzasUITestsLaunchTests.swift */,
 			);
 			path = "Ravn-Challenge-V3-Adriel-PinzasUITests";
+			sourceTree = "<group>";
+		};
+		D24FF8122B18085000795D83 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8322B18584B00795D83 /* Services */,
+				D24FF82D2B1854A700795D83 /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D24FF8132B180CC100795D83 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8142B180EC300795D83 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D24FF8142B180EC300795D83 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8242B18391000795D83 /* View */,
+				D24FF8152B1810A600795D83 /* HomeViewController.swift */,
+				D24FF8172B1810C400795D83 /* HomeInteractor.swift */,
+				D24FF8192B1828B700795D83 /* HomePresenter.swift */,
+				D24FF81C2B1828CC00795D83 /* HomeRouter.swift */,
+				D24FF8202B1838E700795D83 /* Home.swift */,
+				D24FF8222B18390700795D83 /* Home+ViewModel.swift */,
+				D24FF8382B18604F00795D83 /* Home+Content.swift */,
+				D24FF83A2B18613A00795D83 /* Home+Initializer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D24FF8242B18391000795D83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF81E2B1837A000795D83 /* HomeView.swift */,
+				D24FF8252B183EE400795D83 /* HomeLaunchTableViewCell.swift */,
+				D24FF85D2B1ACA9200795D83 /* HomeNavigationTitleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D24FF8272B184AC600795D83 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF7E22B1805A400795D83 /* AppDelegate.swift */,
+				D24FF7E42B1805A400795D83 /* SceneDelegate.swift */,
+				D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */,
+				D24FF7F02B1805A600795D83 /* Info.plist */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		D24FF82A2B184E0600795D83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF84C2B194F4500795D83 /* Extension */,
+				D24FF82C2B184F1900795D83 /* Localizbles */,
+				D24FF82B2B184F0E00795D83 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D24FF82B2B184F0E00795D83 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF7EB2B1805A600795D83 /* Assets.xcassets */,
+				D24FF8642B1BFE9A00795D83 /* Color.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D24FF82C2B184F1900795D83 /* Localizbles */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF84A2B194DB200795D83 /* Localizable.strings */,
+			);
+			path = Localizbles;
+			sourceTree = "<group>";
+		};
+		D24FF82D2B1854A700795D83 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8572B1AABCD00795D83 /* DataResponse.swift */,
+				D24FF82E2B1854DB00795D83 /* HomeResponse.swift */,
+				D24FF8302B1856F200795D83 /* Launch.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D24FF8322B18584B00795D83 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF84F2B1973EA00795D83 /* Mock */,
+				D24FF8342B1859F200795D83 /* ServiceManager.swift */,
+				D24FF8362B185C9200795D83 /* HomeService.swift */,
+				D24FF8612B1AF58E00795D83 /* SearchService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D24FF83C2B18732B00795D83 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF83D2B18734B00795D83 /* Views */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D24FF83D2B18734B00795D83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8662B1C00B900795D83 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D24FF84C2B194F4500795D83 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF84D2B194F5500795D83 /* String+Extension.swift */,
+				D24FF85F2B1AE82800795D83 /* TableView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D24FF84F2B1973EA00795D83 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF8522B1991CA00795D83 /* HomeJson.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +390,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D24FF7D62B1805A400795D83;
 			productRefGroup = D24FF7E02B1805A400795D83 /* Products */;
@@ -231,9 +409,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24FF85A2B1AC21600795D83 /* HomeJson.json in Resources */,
 				D24FF7EF2B1805A600795D83 /* LaunchScreen.storyboard in Resources */,
+				D24FF8652B1BFE9A00795D83 /* Color.xcassets in Resources */,
+				D24FF8482B194DB200795D83 /* Localizable.strings in Resources */,
 				D24FF7EC2B1805A600795D83 /* Assets.xcassets in Resources */,
-				D24FF7EA2B1805A400795D83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +438,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D24FF7E72B1805A400795D83 /* ViewController.swift in Sources */,
 				D24FF7E32B1805A400795D83 /* AppDelegate.swift in Sources */,
+				D24FF8262B183EE400795D83 /* HomeLaunchTableViewCell.swift in Sources */,
+				D24FF8312B1856F200795D83 /* Launch.swift in Sources */,
+				D24FF8672B1C00B900795D83 /* LoadingView.swift in Sources */,
+				D24FF81F2B1837A000795D83 /* HomeView.swift in Sources */,
+				D24FF8352B1859F200795D83 /* ServiceManager.swift in Sources */,
+				D24FF82F2B1854DB00795D83 /* HomeResponse.swift in Sources */,
+				D24FF81D2B1828CC00795D83 /* HomeRouter.swift in Sources */,
 				D24FF7E52B1805A400795D83 /* SceneDelegate.swift in Sources */,
+				D24FF8162B1810A600795D83 /* HomeViewController.swift in Sources */,
+				D24FF84E2B194F5500795D83 /* String+Extension.swift in Sources */,
+				D24FF83B2B18613A00795D83 /* Home+Initializer.swift in Sources */,
+				D24FF8602B1AE82800795D83 /* TableView+Extension.swift in Sources */,
+				D24FF8232B18390700795D83 /* Home+ViewModel.swift in Sources */,
+				D24FF8582B1AABCD00795D83 /* DataResponse.swift in Sources */,
+				D24FF81A2B1828B700795D83 /* HomePresenter.swift in Sources */,
+				D24FF8392B18604F00795D83 /* Home+Content.swift in Sources */,
+				D24FF85E2B1ACA9200795D83 /* HomeNavigationTitleView.swift in Sources */,
+				D24FF8372B185C9200795D83 /* HomeService.swift in Sources */,
+				D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */,
+				D24FF8212B1838E700795D83 /* Home.swift in Sources */,
+				D24FF8182B1810C400795D83 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,20 +496,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D24FF7E82B1805A400795D83 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D24FF7E92B1805A400795D83 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D24FF7ED2B1805A600795D83 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D24FF7EE2B1805A600795D83 /* Base */,
+				D24FF8452B194D7400795D83 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D24FF84A2B194DB200795D83 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D24FF8492B194DB200795D83 /* en */,
+				D24FF84B2B194DB600795D83 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -320,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -366,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -420,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -439,9 +642,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ravn-Challenge-V3-Adriel-Pinzas/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,9 +670,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ravn-Challenge-V3-Adriel-Pinzas/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
