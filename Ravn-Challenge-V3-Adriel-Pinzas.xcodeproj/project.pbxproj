@@ -37,6 +37,8 @@
 		D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8612B1AF58E00795D83 /* SearchService.swift */; };
 		D24FF8652B1BFE9A00795D83 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24FF8642B1BFE9A00795D83 /* Color.xcassets */; };
 		D24FF8672B1C00B900795D83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8662B1C00B900795D83 /* LoadingView.swift */; };
+		D24FF86A2B1C16C600795D83 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = D24FF8692B1C16C600795D83 /* Apollo */; };
+		D24FF86D2B1C175F00795D83 /* GetLaunches.graphql in Resources */ = {isa = PBXBuildFile; fileRef = D24FF86C2B1C175F00795D83 /* GetLaunches.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,7 @@
 		D24FF8612B1AF58E00795D83 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		D24FF8642B1BFE9A00795D83 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		D24FF8662B1C00B900795D83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D24FF86C2B1C175F00795D83 /* GetLaunches.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetLaunches.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24FF86A2B1C16C600795D83 /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,7 @@
 		D24FF7E12B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas */ = {
 			isa = PBXGroup;
 			children = (
+				D24FF86B2B1C173100795D83 /* Queries */,
 				D24FF83C2B18732B00795D83 /* Utilities */,
 				D24FF82A2B184E0600795D83 /* Resources */,
 				D24FF8272B184AC600795D83 /* Aplication */,
@@ -304,6 +309,14 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		D24FF86B2B1C173100795D83 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				D24FF86C2B1C175F00795D83 /* GetLaunches.graphql */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,6 +333,9 @@
 			dependencies = (
 			);
 			name = "Ravn-Challenge-V3-Adriel-Pinzas";
+			packageProductDependencies = (
+				D24FF8692B1C16C600795D83 /* Apollo */,
+			);
 			productName = "Ravn-Challenge-V3-Adriel-Pinzas";
 			productReference = D24FF7DF2B1805A400795D83 /* Ravn-Challenge-V3-Adriel-Pinzas.app */;
 			productType = "com.apple.product-type.application";
@@ -393,6 +409,9 @@
 				es,
 			);
 			mainGroup = D24FF7D62B1805A400795D83;
+			packageReferences = (
+				D24FF8682B1C16C600795D83 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = D24FF7E02B1805A400795D83 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -414,6 +433,7 @@
 				D24FF8652B1BFE9A00795D83 /* Color.xcassets in Resources */,
 				D24FF8482B194DB200795D83 /* Localizable.strings in Resources */,
 				D24FF7EC2B1805A600795D83 /* Assets.xcassets in Resources */,
+				D24FF86D2B1C175F00795D83 /* GetLaunches.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +821,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D24FF8682B1C16C600795D83 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D24FF8692B1C16C600795D83 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D24FF8682B1C16C600795D83 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D24FF7D72B1805A400795D83 /* Project object */;
 }
