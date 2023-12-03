@@ -6,43 +6,40 @@
 //
 
 import Foundation
+import Apollo
+import SpaceXAPI
+
+struct RequestError: Error, Codable {
+    let key: String
+    let message: String
+}
 
 protocol HomeServiceProtocol {
-    typealias lauchesResult = Result<HomeResponse, Error>
-    func fetchLauches(completion: @escaping (lauchesResult) -> Void)
+    typealias launchesResult = Result<[GetLaunchesQuery.Data.Launch], Error>
+    func fetchLauches(completion: @escaping (launchesResult) -> Void)
 }
 
 final class HomeService: HomeServiceProtocol {
-    private let manager: ServiceManager
+    private let apolloNetwork: ApolloNetwork
+    var launches = [GetLaunchesQuery.Data.Launch]()
     
-    init(manager: ServiceManager) {
-        self.manager = manager
+    init(apolloNetwork: ApolloNetwork = ApolloNetwork.shared) {
+        self.apolloNetwork = apolloNetwork
     }
     
-    func fetchLauches(completion: @escaping (lauchesResult) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
-            
-            if let path = Bundle.main.path(forResource: "HomeJson", ofType: "json") {
-                do {
-                    guard let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
-                          let response = try? JSONDecoder().decode(DataResponse.self,
-                                                                   from: data).data else {
-                        completion(.failure(RequestError(key: "json.parsing.error", message: "Parse error")))
-                        return
-                    }
-                    completion(.success(response))
+    func fetchLauches(completion: @escaping (launchesResult) -> Void) {
+        apolloNetwork.apollo.fetch(query: GetLaunchesQuery()) { result in
+            switch result {
+            case .success(let graphQLResult):
+                if let launchConnection = graphQLResult.data?.launches {
+                    let launches = launchConnection.compactMap( { $0 } )
+                    completion(.success(launches))
+                } else {
+                    completion(.failure(RequestError(key: "json.parsing.error", message: "Parsing error")))
                 }
+            case .failure(let error):
+                completion(.failure(error))
             }
-        })
-        
-        
-//        manager.request("url", method: .get, parameters: nil, headers: nil) { (result: Result<HomeResponseDTO, RequestError>) in
-//            switch result {
-//            case .success(let response):
-//                completion(.success(response))
-//            case .failure(let error):
-//                completion(.failure(error))
-//            }
-//        }
+        }
     }
 }

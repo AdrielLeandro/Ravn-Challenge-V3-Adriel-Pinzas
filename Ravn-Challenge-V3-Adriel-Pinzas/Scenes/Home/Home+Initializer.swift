@@ -10,7 +10,7 @@ import UIKit
 extension Home {
     static func createScene() -> UIViewController {
         let navigation = UINavigationController()
-        let homeService = HomeService(manager: ServiceManager())
+        let homeService = HomeService()
         let searchService = SearchService()
         let presenter = HomePresenter()
         let router = HomeRouter(navigation: navigation)

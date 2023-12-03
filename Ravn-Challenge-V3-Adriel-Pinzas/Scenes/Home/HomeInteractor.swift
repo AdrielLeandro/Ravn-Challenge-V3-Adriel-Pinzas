@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SpaceXAPI
+import Apollo
 
 protocol HomeInteractorProtocol {
     func viewDidLoad()
@@ -20,7 +22,7 @@ class HomeInteractor: HomeInteractorProtocol {
     private let router: HomeRouterProtocol
     private let homeService: HomeServiceProtocol
     private let searchService: SearchServiceProtocol
-    private var response: HomeResponse?
+    private var launches: [GetLaunchesQuery.Data.Launch]?
     
     init(presenter: HomePresenterProtocol,
          router: HomeRouterProtocol,
@@ -34,7 +36,7 @@ class HomeInteractor: HomeInteractorProtocol {
     
     func viewDidLoad() {
         if let homeResponseData = UserDefaults.standard.data(forKey: "homeResponse"),
-           let homeResponse = try? JSONDecoder().decode(HomeResponse.self, from: homeResponseData) {
+           let homeResponse = try? JSONDecoder().decode([GetLaunchesQuery.Data.Launch].self, from: homeResponseData) {
             presenter.presentSavedData(content: Home.Content(homeResponse: homeResponse))
         } else {
             presenter.present(content: nil)
@@ -48,14 +50,14 @@ class HomeInteractor: HomeInteractorProtocol {
     
     func searchBarCancelButtonTouched() {
         presenter.hideSearch()
-        guard let response else { return }
-        presenter.present(content: Home.Content(homeResponse: response))
+        guard let launches else { return }
+        presenter.present(content: Home.Content(launches: launches))
     }
     
     func searchTextDidChange(_ searchText: String?) {
-        guard let response, let searchText else { return }
-        let filtered = searchService.filterLaunches(response.launches, using: searchText)
-        presenter.presentSearchResults(filtered)
+        guard let launches, let searchText else { return }
+        let filtered = searchService.filterLaunches(launches, using: searchText)
+        presenter.presentSearchResults(content: Home.Content(launches: filtered))
     }
     
     func didSelect(identifier: String) {
@@ -63,22 +65,21 @@ class HomeInteractor: HomeInteractorProtocol {
     }
     
     private func fetchLaunches() {
-        homeService.fetchLauches { [weak self] result in
+        homeService.fetchLauches { result in
             switch result {
-            case .success(let response):
-                self?.response = response
-                self?.saveInformation()
-                self?.presenter.present(content: Home.Content(homeResponse: response))
+            case .success(let launches):
+                self.launches = launches
+                self.presenter.present(content: Home.Content(launches: launches))
             case .failure(let error):
-                self?.presenter.show(error: error)
+                self.presenter.show(error: error)
             }
         }
     }
     
     private func saveInformation() {
-        if let response = response,
-           let data = try? JSONEncoder().encode(response) {
-            UserDefaults.standard.set(data, forKey: "homeResponse")
-        }
+//        if let response = response,
+//           let data = try? JSONEncoder().encode(response) {
+//            UserDefaults.standard.set(data, forKey: "homeResponse")
+//        }
     }
 }

@@ -1,4 +1,3 @@
-directive @defer(label: String, if: Boolean! = true) on FRAGMENT_SPREAD | INLINE_FRAGMENT
 
 """
 A directive used by the Apollo iOS client to annotate operations or fragments that should be used exclusively for generating local cache mutations instead of as standard operations.
@@ -8,13 +7,6 @@ directive @apollo_client_ios_localCacheMutation on QUERY | MUTATION | SUBSCRIPTI
 """
 Directs the executor to defer this fragment when the `if` argument is true or undefined.
 """
-directive @defer(
-  """Deferred when true or undefined."""
-  if: Boolean
-
-  """Unique name"""
-  label: String
-) on FRAGMENT_SPREAD | INLINE_FRAGMENT
 
 type Address {
   address: String

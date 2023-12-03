@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SpaceXAPI
 
 extension Home {
     struct Content {
-        let homeResponse: HomeResponse
+        let launches: [GetLaunchesQuery.Data.Launch]
     }
 }

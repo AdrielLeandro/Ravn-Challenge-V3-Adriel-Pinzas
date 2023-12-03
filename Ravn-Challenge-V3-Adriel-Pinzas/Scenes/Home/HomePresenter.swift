@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SpaceXAPI
 
 protocol HomePresenterProtocol {
-    func presentSearchResults(_ launches: [Launch])
+    func presentSearchResults(content: Home.Content)
     func present(content: Home.Content?)
     func presentSavedData(content: Home.Content)
     func show(error: Error)
@@ -34,15 +35,15 @@ final class HomePresenter: HomePresenterProtocol {
             return
         }
         
-        delegate?.showContent(viewModel: viewModel(from: content.homeResponse))
+        delegate?.showContent(viewModel: viewModel(from: content.launches))
     }
     
     func presentSavedData(content: Home.Content) {
-        delegate?.showContent(viewModel: viewModel(from: content.homeResponse))
+        delegate?.showContent(viewModel: viewModel(from: content.launches))
     }
     
-    func presentSearchResults(_ launches: [Launch]) {
-        delegate?.showContent(viewModel: Home.ViewModel(title: "Launches App", items: createViewModelLaunchItem(from: launches)))
+    func presentSearchResults(content: Home.Content) {
+        delegate?.showContent(viewModel: viewModel(from: content.launches))
     }
     
     func show(error: Error) {
@@ -57,13 +58,13 @@ final class HomePresenter: HomePresenterProtocol {
         delegate?.showHideSearchBar(status: false)
     }
     
-    private func viewModel(from response: HomeResponse) -> Home.ViewModel {
-        return Home.ViewModel(title: "Launches App", items: createViewModelLaunchItem(from: response.launches))
+    private func viewModel(from launches: [GetLaunchesQuery.Data.Launch]) -> Home.ViewModel {
+        return Home.ViewModel(title: "Launches App", items: createViewModelLaunchItem(from: launches))
     }
     
-    private func createViewModelLaunchItem(from launches: [Launch]) -> [Home.ViewModel.LaunchItem] {
+    private func createViewModelLaunchItem(from launches: [GetLaunchesQuery.Data.Launch]) -> [Home.ViewModel.LaunchItem] {
         let items = launches.compactMap({ launch -> Home.ViewModel.LaunchItem in
-            let item = Home.ViewModel.LaunchItem(title: launch.name ?? "", date: launch.date ?? "")
+            let item = Home.ViewModel.LaunchItem(title: launch.mission_name ?? "", date: launch.launch_date_local ?? "")
             return item
         })
         return items

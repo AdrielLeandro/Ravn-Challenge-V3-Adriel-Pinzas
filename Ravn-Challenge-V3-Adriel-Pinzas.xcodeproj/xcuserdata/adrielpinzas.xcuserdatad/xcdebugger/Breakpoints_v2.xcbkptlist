@@ -3,4 +3,38 @@
    uuid = "41502A48-8ECC-4B47-8F91-0B5A49981A75"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDAAA45E-ADF7-4078-9CA7-5DB7E0A1BE94"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/Ravn-Challenge-V3-Adriel-Pinzas-gyxfcneosuijkpgmwjkfnodmlnaq/SourcePackages/checkouts/apollo-ios/Sources/Apollo/ApolloClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "CachePolicy"
+            landmarkType = "13">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94CE7A2F-B3BD-461C-9E21-83C2147E7EEE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/Ravn-Challenge-V3-Adriel-Pinzas-gyxfcneosuijkpgmwjkfnodmlnaq/SourcePackages/checkouts/apollo-ios/Sources/Apollo/ApolloClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "perform(mutation:publishResultToStore:context:queue:resultHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
