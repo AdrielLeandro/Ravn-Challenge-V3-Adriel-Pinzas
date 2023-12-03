@@ -20,22 +20,24 @@ class HomeInteractor: HomeInteractorProtocol {
     private let router: HomeRouterProtocol
     private let homeService: HomeServiceProtocol
     private let searchService: SearchServiceProtocol
+    private let userDefaultsManager: UserDefaultManagerProtocol
     private var launches: [Launch]?
     
     init(presenter: HomePresenterProtocol,
          router: HomeRouterProtocol,
          homeService: HomeServiceProtocol,
-         searchService: SearchServiceProtocol) {
+         searchService: SearchServiceProtocol,
+         userDefaultsManager: UserDefaultManagerProtocol) {
         self.presenter = presenter
         self.router = router
         self.homeService = homeService
         self.searchService = searchService
+        self.userDefaultsManager = userDefaultsManager
     }
     
     func viewDidLoad() {
-        if let homeResponseData = UserDefaults.standard.data(forKey: "homeResponse"),
-           let launches = try? JSONDecoder().decode([Launch].self, from: homeResponseData) {
-            presenter.presentSavedData(content: launches)
+        if let launches: [Launch] = userDefaultsManager.get(key: .launches) {
+            presenter.presentSearchResults(content: launches)
         } else {
             presenter.present(content: nil)
         }
@@ -75,9 +77,8 @@ class HomeInteractor: HomeInteractorProtocol {
     }
     
     private func saveInformation() {
-        if let response = launches,
-           let data = try? JSONEncoder().encode(response) {
-            UserDefaults.standard.set(data, forKey: "homeResponse")
+        if let launches = launches {
+            userDefaultsManager.seve(data: launches, key: .launches)
         }
     }
 }

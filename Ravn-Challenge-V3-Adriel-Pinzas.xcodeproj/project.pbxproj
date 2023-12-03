@@ -37,6 +37,7 @@
 		D24FF8752B1C1FCC00795D83 /* SpaceXAPI in Frameworks */ = {isa = PBXBuildFile; productRef = D24FF8742B1C1FCC00795D83 /* SpaceXAPI */; };
 		D24FF8772B1C203700795D83 /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8762B1C203700795D83 /* ApolloNetwork.swift */; };
 		D24FF87F2B1D244400795D83 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF87E2B1D244400795D83 /* Launch.swift */; };
+		D24FF8822B1D2D8200795D83 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8812B1D2D8200795D83 /* UserDefaultManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		D24FF8722B1C1F8D00795D83 /* SpaceXAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SpaceXAPI; sourceTree = "<group>"; };
 		D24FF8762B1C203700795D83 /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
 		D24FF87E2B1D244400795D83 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+		D24FF8812B1D2D8200795D83 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 		D24FF8802B1D29EC00795D83 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				D24FF8812B1D2D8200795D83 /* UserDefaultManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				D24FF81A2B1828B700795D83 /* HomePresenter.swift in Sources */,
 				D24FF85E2B1ACA9200795D83 /* HomeNavigationTitleView.swift in Sources */,
 				D24FF8772B1C203700795D83 /* ApolloNetwork.swift in Sources */,
+				D24FF8822B1D2D8200795D83 /* UserDefaultManager.swift in Sources */,
 				D24FF8372B185C9200795D83 /* HomeService.swift in Sources */,
 				D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */,
 				D24FF8212B1838E700795D83 /* Home.swift in Sources */,
