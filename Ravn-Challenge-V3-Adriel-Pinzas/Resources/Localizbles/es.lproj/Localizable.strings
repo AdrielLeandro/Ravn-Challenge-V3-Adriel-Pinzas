@@ -6,3 +6,8 @@
   
 */
 
+"emptyView.message" = "No hay datos disponibles";
+"view.title" = "Aplicación de Lanzamientos";
+"data.error.message" = "Datos no disponibles";
+"not.connection.error.message" = "Sin conexión";
+"alert.button.title" = "Aceptar";

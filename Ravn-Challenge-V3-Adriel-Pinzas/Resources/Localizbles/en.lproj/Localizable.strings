@@ -5,3 +5,9 @@
   Created by Adriel Pinzas on 30/11/23.
   
 */
+
+"emptyView.message" = "No data available";
+"view.title" = "Lunches App";
+"data.error.message" = "Data not available";
+"not.connection.error.message" = "No Connection";
+"alert.button.title" = "Ok";
