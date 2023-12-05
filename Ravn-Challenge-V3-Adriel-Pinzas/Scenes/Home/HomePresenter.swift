@@ -9,9 +9,9 @@ import UIKit
 
 protocol HomePresenterProtocol {
     func present(content: [Launch]?)
-    func presentSearchResults(content: [Launch])
-    func presentSavedData(content: [Launch])
-    func show(error: Error)
+    func showAlertError(_ error: Error)
+    func showErrorView(_ error: Error)
+    func showLoading()
     func showSearch()
     func hideSearch()
 }
@@ -19,7 +19,8 @@ protocol HomePresenterProtocol {
 protocol HomePresenterDelegate: UIViewController {
     func showLoading()
     func showEmptyView()
-    func showError(_ error: Error)
+    func showAlertError(_ error: Error)
+    func showErrorView(_ error: Error)
     func showContent(viewModel: Home.ViewModel)
     func showHideSearchBar(status: Bool)
 }
@@ -29,24 +30,23 @@ final class HomePresenter: HomePresenterProtocol {
     weak var delegate: HomePresenterDelegate?
 
     func present(content: [Launch]?) {
-        guard let content else {
-            delegate?.showLoading()
-            return
+        if let content = content, !content.isEmpty {
+            delegate?.showContent(viewModel: viewModel(from: content))
+        } else {
+            delegate?.showEmptyView()
         }
-        
-        delegate?.showContent(viewModel: viewModel(from: content))
     }
     
-    func presentSavedData(content: [Launch]) {
-        delegate?.showContent(viewModel: viewModel(from: content))
+    func showLoading() {
+        delegate?.showLoading()
+    }
+
+    func showAlertError(_ error: Error) {
+        delegate?.showAlertError(error)
     }
     
-    func presentSearchResults(content: [Launch]) {
-        delegate?.showContent(viewModel: viewModel(from: content))
-    }
-    
-    func show(error: Error) {
-        delegate?.showError(error)
+    func showErrorView(_ error: Error) {
+        delegate?.showErrorView(error)
     }
     
     func showSearch() {
@@ -58,7 +58,7 @@ final class HomePresenter: HomePresenterProtocol {
     }
     
     private func viewModel(from launches: [Launch]) -> Home.ViewModel {
-        return Home.ViewModel(title: "Launches App", items: createViewModelLaunchItem(from: launches))
+        return Home.ViewModel(title: "view.title".localized, items: createViewModelLaunchItem(from: launches))
     }
     
     private func createViewModelLaunchItem(from launches: [Launch]) -> [Home.ViewModel.LaunchItem] {

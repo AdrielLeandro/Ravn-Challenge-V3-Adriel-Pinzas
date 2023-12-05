@@ -9,7 +9,7 @@ import Foundation
 import Apollo
 import SpaceXAPI
 
-struct RequestError: Error, Codable {
+struct DefaultError: Error, Codable {
     let key: String
     let message: String
 }
@@ -37,10 +37,11 @@ final class HomeService: HomeServiceProtocol {
                                                                          detail: $0?.details ?? "") } )
                     completion(.success(launches))
                 } else {
-                    completion(.failure(RequestError(key: "json.parsing.error", message: "Parsing error")))
+                    completion(.failure(DefaultError(key: "data.error",
+                                                     message: "data.error.message".localized)))
                 }
             case .failure(let error):
-                completion(.failure(error))
+                completion(.failure(DefaultError(key: "", message: error.localizedDescription.localized)))
             }
         }
     }

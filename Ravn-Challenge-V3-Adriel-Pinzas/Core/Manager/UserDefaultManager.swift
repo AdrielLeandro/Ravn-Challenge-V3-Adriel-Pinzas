@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol UserDefaultManagerProtocol {
-    func seve<T: Encodable>(data: T, key: UserDefaultManager.UserDefaultKeys)
+    func save<T: Encodable>(data: T, key: UserDefaultManager.UserDefaultKeys)
     func get<T: Codable>(key: UserDefaultManager.UserDefaultKeys) -> T?
 }
 
@@ -22,7 +22,7 @@ class UserDefaultManager: UserDefaultManagerProtocol {
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
     
-    func seve<T: Encodable>(data: T, key: UserDefaultKeys) {
+    func save<T: Encodable>(data: T, key: UserDefaultKeys) {
         let data = try? encoder.encode(data)
         defaults.set(data, forKey: key.rawValue)
     }

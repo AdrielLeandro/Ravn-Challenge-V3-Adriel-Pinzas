@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 
 protocol HomeInteractorProtocol {
     func viewDidLoad()
@@ -21,27 +22,30 @@ class HomeInteractor: HomeInteractorProtocol {
     private let homeService: HomeServiceProtocol
     private let searchService: SearchServiceProtocol
     private let userDefaultsManager: UserDefaultManagerProtocol
+    private let networkRechabilityManager: NetworkRechabilityManagerProtocol
     private var launches: [Launch]?
     
     init(presenter: HomePresenterProtocol,
          router: HomeRouterProtocol,
          homeService: HomeServiceProtocol,
          searchService: SearchServiceProtocol,
-         userDefaultsManager: UserDefaultManagerProtocol) {
+         userDefaultsManager: UserDefaultManagerProtocol,
+         networkRechabilityManager: NetworkRechabilityManagerProtocol) {
         self.presenter = presenter
         self.router = router
         self.homeService = homeService
         self.searchService = searchService
         self.userDefaultsManager = userDefaultsManager
+        self.networkRechabilityManager = networkRechabilityManager
     }
     
     func viewDidLoad() {
         if let launches: [Launch] = userDefaultsManager.get(key: .launches) {
-            presenter.presentSearchResults(content: launches)
+            presenter.present(content: launches)
         } else {
-            presenter.present(content: nil)
+            presenter.showLoading()
+            fetchLaunches()
         }
-        fetchLaunches()
     }
     
     func showSearchButtonTouched() {
@@ -57,7 +61,7 @@ class HomeInteractor: HomeInteractorProtocol {
     func searchTextDidChange(_ searchText: String?) {
         guard let launches, let searchText else { return }
         let filtered = searchService.filterLaunches(launches, using: searchText)
-        presenter.presentSearchResults(content: filtered)
+        presenter.present(content: filtered)
     }
     
     func didSelect(identifier: String) {
@@ -65,20 +69,46 @@ class HomeInteractor: HomeInteractorProtocol {
     }
     
     private func fetchLaunches() {
-        homeService.fetchLauches { result in
+        homeService.fetchLauches { [weak self] result in
             switch result {
             case .success(let launches):
-                self.launches = launches
-                self.presenter.present(content: launches)
+                self?.launches = launches
+                self?.saveInformation()
+                self?.presenter.present(content: launches)
             case .failure(let error):
-                self.presenter.show(error: error)
+                if let self = self, self.getSavedLaunches().isEmpty {
+                    self.presenter.showErrorView(error)
+                } else {
+                    self?.presenter.showAlertError(error)
+                }
             }
         }
     }
     
     private func saveInformation() {
         if let launches = launches {
-            userDefaultsManager.seve(data: launches, key: .launches)
+            userDefaultsManager.save(data: launches, key: .launches)
+        }
+    }
+    
+    private func getSavedLaunches() -> [Launch] {
+        if let launches: [Launch] = self.userDefaultsManager.get(key: .launches) {
+            return launches
+        } else {
+            return []
+        }
+    }
+}
+
+extension HomeInteractor: NetworkRechabilityManagerDelegate {
+    func networkStatusDidChange(connected: Bool) {
+        DispatchQueue.main.async {
+            if connected {
+                self.fetchLaunches()
+                if self.getSavedLaunches().isEmpty {
+                    self.presenter.showLoading()
+                }
+            } 
         }
     }
 }

@@ -38,6 +38,9 @@
 		D24FF8772B1C203700795D83 /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8762B1C203700795D83 /* ApolloNetwork.swift */; };
 		D24FF87F2B1D244400795D83 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF87E2B1D244400795D83 /* Launch.swift */; };
 		D24FF8822B1D2D8200795D83 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8812B1D2D8200795D83 /* UserDefaultManager.swift */; };
+		D24FF8842B1D35D900795D83 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8832B1D35D900795D83 /* EmptyView.swift */; };
+		D24FF8862B1D769600795D83 /* NetworkRechabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8852B1D769600795D83 /* NetworkRechabilityManager.swift */; };
+		D24FF88A2B1ECB1700795D83 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24FF8892B1ECB1700795D83 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		D24FF8762B1C203700795D83 /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
 		D24FF87E2B1D244400795D83 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		D24FF8812B1D2D8200795D83 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		D24FF8832B1D35D900795D83 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		D24FF8852B1D769600795D83 /* NetworkRechabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRechabilityManager.swift; sourceTree = "<group>"; };
+		D24FF8892B1ECB1700795D83 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				D24FF8662B1C00B900795D83 /* LoadingView.swift */,
+				D24FF8832B1D35D900795D83 /* EmptyView.swift */,
+				D24FF8892B1ECB1700795D83 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				D24FF8812B1D2D8200795D83 /* UserDefaultManager.swift */,
+				D24FF8852B1D769600795D83 /* NetworkRechabilityManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -476,10 +485,12 @@
 				D24FF7E32B1805A400795D83 /* AppDelegate.swift in Sources */,
 				D24FF8262B183EE400795D83 /* HomeLaunchTableViewCell.swift in Sources */,
 				D24FF8672B1C00B900795D83 /* LoadingView.swift in Sources */,
+				D24FF8862B1D769600795D83 /* NetworkRechabilityManager.swift in Sources */,
 				D24FF81F2B1837A000795D83 /* HomeView.swift in Sources */,
 				D24FF81D2B1828CC00795D83 /* HomeRouter.swift in Sources */,
 				D24FF7E52B1805A400795D83 /* SceneDelegate.swift in Sources */,
 				D24FF8162B1810A600795D83 /* HomeViewController.swift in Sources */,
+				D24FF88A2B1ECB1700795D83 /* ErrorView.swift in Sources */,
 				D24FF84E2B194F5500795D83 /* String+Extension.swift in Sources */,
 				D24FF83B2B18613A00795D83 /* Home+Initializer.swift in Sources */,
 				D24FF8602B1AE82800795D83 /* TableView+Extension.swift in Sources */,
@@ -492,6 +503,7 @@
 				D24FF8622B1AF58E00795D83 /* SearchService.swift in Sources */,
 				D24FF8212B1838E700795D83 /* Home.swift in Sources */,
 				D24FF87F2B1D244400795D83 /* Launch.swift in Sources */,
+				D24FF8842B1D35D900795D83 /* EmptyView.swift in Sources */,
 				D24FF8182B1810C400795D83 /* HomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

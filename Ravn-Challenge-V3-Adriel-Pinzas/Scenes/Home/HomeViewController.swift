@@ -7,17 +7,14 @@
 
 import UIKit
 
-typealias InitialProtocols = LoadingProtocol
+typealias InitialProtocols = LoadingProtocol & EmptyProtocol & ErrorProtocol
 
 
 class HomeViewController: UIViewController, InitialProtocols {
-    private enum Constant {
-
-    }
     private let interactor: HomeInteractorProtocol
     
     private lazy var homeNavigationTitleView: HomeNavigationTitleView = {
-        let homeNavigationTitleView = HomeNavigationTitleView(title: "Test App".localized)
+        let homeNavigationTitleView = HomeNavigationTitleView()
         homeNavigationTitleView.delegate = self
         return homeNavigationTitleView
     }()
@@ -30,8 +27,10 @@ class HomeViewController: UIViewController, InitialProtocols {
         return view
     }()
     
-     var loadingView = LoadingView()
-    
+    var loadingView = LoadingView()
+    var emptyView = EmptyView()
+    var errorView = ErrorView()
+
     init(interactor: HomeInteractorProtocol) {
         self.interactor = interactor
         super.init(nibName: nil, bundle: nil)
@@ -122,6 +121,9 @@ extension HomeViewController: HomePresenterDelegate {
     
     func showContent(viewModel: Home.ViewModel) {
         stopLoading()
+        stopEmptyView()
+        stopError()
+        homeNavigationTitleView.set(title: viewModel.title)
         homeView.render(viewModel: viewModel)
     }
     
@@ -130,11 +132,20 @@ extension HomeViewController: HomePresenterDelegate {
     }
     
     func showEmptyView() {
-
+        startEmptyView()
     }
     
-    func showError(_ error: Error) {
-        print(error)
+    func showAlertError(_ error: Error) {
+        stopLoading()
+        let alertController = UIAlertController(title: title, message: (error as? DefaultError)?.message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "alert.button.title".localized, style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+    
+    func showErrorView(_ error: Error) {
+        stopLoading()
+        startError(with: (error as? DefaultError)?.message)
     }
 }
 

@@ -27,6 +27,7 @@ final class HomeNavigationTitleView: UIView {
         showSearchBarButton.translatesAutoresizingMaskIntoConstraints = false
         showSearchBarButton.setImage(UIImage(named: "searchIcon"), for: .normal)
         showSearchBarButton.addTarget(self, action: #selector(showSearchButtonTouched), for: .touchUpInside)
+        showSearchBarButton.isHidden = true
         return showSearchBarButton
     }()
     
@@ -51,10 +52,9 @@ final class HomeNavigationTitleView: UIView {
     
     weak var delegate: HomeNavigationTitleViewDelegateProtocol?
     
-    init(title: String) {
+    init() {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = title
         searchBar.delegate = self
         setUpSubviews()
     }
@@ -96,6 +96,7 @@ final class HomeNavigationTitleView: UIView {
     
     func set(title: String) {
         titleLabel.text = title
+        showSearchBarButton.isHidden = false
     }
 }
 
