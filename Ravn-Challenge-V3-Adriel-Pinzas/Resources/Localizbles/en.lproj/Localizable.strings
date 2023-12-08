@@ -7,7 +7,7 @@
 */
 
 "emptyView.message" = "No data available";
-"view.title" = "Lunches App";
+"view.title" = "Launches App";
 "data.error.message" = "Data not available";
 "not.connection.error.message" = "No Connection";
 "alert.button.title" = "Ok";
