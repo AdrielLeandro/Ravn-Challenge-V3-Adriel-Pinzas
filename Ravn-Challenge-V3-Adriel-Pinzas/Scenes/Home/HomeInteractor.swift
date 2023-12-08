@@ -24,6 +24,7 @@ final class HomeInteractor: HomeInteractorProtocol {
     private let userDefaultsManager: UserDefaultsManagerProtocol
     private let networkRechabilityManager: NetworkRechabilityManagerProtocol
     private var launches: [Launch]?
+    private var filteredLaunches: [Launch] = []
     
     init(presenter: HomePresenterProtocol,
          router: HomeRouterProtocol,
@@ -55,18 +56,21 @@ final class HomeInteractor: HomeInteractorProtocol {
     
     func searchBarCancelButtonTouched() {
         presenter.hideSearch()
+        filteredLaunches.removeAll()
         guard let launches else { return }
         presenter.present(content: launches)
     }
     
     func searchTextDidChange(_ searchText: String?) {
         guard let launches, let searchText else { return }
-        let filtered = searchService.filterLaunches(launches, using: searchText)
-        presenter.present(content: filtered)
+        filteredLaunches = searchService.filterLaunches(launches, using: searchText)
+        presenter.present(content: filteredLaunches)
     }
     
     func didSelect(indexPath: IndexPath) {
-        if let launch = launches?[indexPath.row] {
+        if !filteredLaunches.isEmpty {
+            router.navigateToDetail(with: filteredLaunches[indexPath.row])
+        } else if let launch = launches?[indexPath.row] {
             router.navigateToDetail(with: launch)
         }
     }
