@@ -33,7 +33,7 @@ final class HomeService: HomeServiceProtocol {
                 if let launchConnection = graphQLResult.data?.launches {
                     let launches = launchConnection.compactMap( { Launch(id: $0?.id ?? "",
                                                                          missionName: $0?.mission_name ?? "",
-                                                                         launchDate: $0?.launch_date_local ?? "",
+                                                                         launchDate: $0?.launch_date_local?.toDate(),
                                                                          detail: $0?.details ?? "") } )
                     completion(.success(launches))
                 } else {

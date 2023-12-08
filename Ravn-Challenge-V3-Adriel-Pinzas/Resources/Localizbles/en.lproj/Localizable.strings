@@ -11,3 +11,6 @@
 "data.error.message" = "Data not available";
 "not.connection.error.message" = "No Connection";
 "alert.button.title" = "Ok";
+"detail.date" = "Launch Date: %@";
+"date.error" = "Not Avalilable";
+"not.description" = "Not Information";

@@ -11,3 +11,6 @@
 "data.error.message" = "Datos no disponibles";
 "not.connection.error.message" = "Sin conexión";
 "alert.button.title" = "Aceptar";
+"detail.date" = "Fecha de lanzamiento: %@";
+"date.error" = "No Habilitado";
+"not.description" = "No hay información";

@@ -10,6 +10,6 @@ import Foundation
 struct Launch: Codable {
     let id: String
     let missionName: String
-    let launchDate: String
+    let launchDate: Date?
     let detail: String
 }

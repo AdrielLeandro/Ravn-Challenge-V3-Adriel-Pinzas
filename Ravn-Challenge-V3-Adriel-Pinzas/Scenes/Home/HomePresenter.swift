@@ -64,7 +64,7 @@ final class HomePresenter: HomePresenterProtocol {
     private func createViewModelLaunchItem(from launches: [Launch]) -> [Home.ViewModel.LaunchItem] {
         let items = launches.compactMap({ launch -> Home.ViewModel.LaunchItem in
             let item = Home.ViewModel.LaunchItem(title: launch.missionName,
-                                                 date: launch.launchDate)
+                                                 date: launch.launchDate?.toString() ?? "date.error".localized)
             return item
         })
         return items

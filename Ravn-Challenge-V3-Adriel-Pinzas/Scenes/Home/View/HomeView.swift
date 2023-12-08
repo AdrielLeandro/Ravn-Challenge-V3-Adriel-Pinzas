@@ -26,9 +26,9 @@ final class HomeView: UIView {
         return launchesTableView
     }()
     private var launches: [Home.ViewModel.LaunchItem] = []
-    private var onTap: ((String) -> Void)?
+    private var onTap: ((IndexPath) -> Void)?
 
-    init(onTap: @escaping (String) -> Void) {
+    init(onTap: @escaping (IndexPath) -> Void) {
         super.init(frame: .zero)
         self.onTap = onTap
         setupTableView()
@@ -67,7 +67,7 @@ extension HomeView: UITableViewDataSource {
 
 extension HomeView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onTap?(launches[indexPath.row].title)
+        onTap?(indexPath)
     }
 }
 

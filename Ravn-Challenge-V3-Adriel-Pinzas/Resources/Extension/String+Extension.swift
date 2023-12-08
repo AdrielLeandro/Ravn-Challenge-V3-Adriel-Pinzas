@@ -15,4 +15,10 @@ extension String {
     func localizedFormat(_ arguments: CVarArg...) -> String {
         return String(format: localized, arguments: arguments)
     }
+    
+    func toDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+        return dateFormatter.date(from: self)
+    }
 }

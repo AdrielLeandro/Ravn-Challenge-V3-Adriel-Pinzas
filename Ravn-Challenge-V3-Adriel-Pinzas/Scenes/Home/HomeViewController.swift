@@ -9,7 +9,6 @@ import UIKit
 
 typealias InitialProtocols = LoadingProtocol & EmptyProtocol & ErrorProtocol
 
-
 class HomeViewController: UIViewController, InitialProtocols {
     private let interactor: HomeInteractorProtocol
     
@@ -20,8 +19,8 @@ class HomeViewController: UIViewController, InitialProtocols {
     }()
     
     private lazy var homeView: HomeView = {
-        let view = HomeView { [weak self] indentifier in
-            self?.interactor.didSelect(identifier: indentifier)
+        let view = HomeView { [weak self] indexPath in
+            self?.interactor.didSelect(indexPath: indexPath)
         }
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -74,7 +73,6 @@ class HomeViewController: UIViewController, InitialProtocols {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
-        
     }
     
     private func setupNotification() {

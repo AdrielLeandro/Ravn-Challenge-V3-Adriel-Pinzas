@@ -13,7 +13,7 @@ protocol HomeInteractorProtocol {
     func showSearchButtonTouched()
     func searchBarCancelButtonTouched()
     func searchTextDidChange(_ searchText: String?)
-    func didSelect(identifier: String)
+    func didSelect(indexPath: IndexPath)
 }
 
 class HomeInteractor: HomeInteractorProtocol {
@@ -41,6 +41,7 @@ class HomeInteractor: HomeInteractorProtocol {
     
     func viewDidLoad() {
         if let launches: [Launch] = userDefaultsManager.get(key: .launches) {
+            self.launches = launches
             presenter.present(content: launches)
         } else {
             presenter.showLoading()
@@ -64,8 +65,10 @@ class HomeInteractor: HomeInteractorProtocol {
         presenter.present(content: filtered)
     }
     
-    func didSelect(identifier: String) {
-        
+    func didSelect(indexPath: IndexPath) {
+        if let launch = launches?[indexPath.row] {
+            router.navigateToDetail(with: launch)
+        }
     }
     
     private func fetchLaunches() {
