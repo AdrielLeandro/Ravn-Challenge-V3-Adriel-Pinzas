@@ -12,6 +12,9 @@ This application was created using Swift and UIkit. It is localized in English a
 
 ### Screenshots
 
+<img width="1224" alt="Screenshot 2023-12-08 at 00 50 32" src="https://github.com/AdrielLeandro/Ravn-Challenge-V3-Adriel-Pinzas/assets/49699779/a53a9503-cd83-4d4a-961b-f9770ef1f3d3">
+
+You can find a video [here](./Screenshots/Screen-Recording.mp4).
 
 ## Architecture and reasoning
 
