@@ -35,6 +35,7 @@ final class HomeNavigationTitleView: UIView {
         let searchBar = UISearchBar()
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.showsCancelButton = true
+        searchBar.barTintColor = .white
         return searchBar
     }()
     

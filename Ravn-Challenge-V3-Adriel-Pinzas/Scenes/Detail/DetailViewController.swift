@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
         let appearance = UINavigationBarAppearance()
         let backButton = UIImage(named: "backIcon")
         appearance.configureWithDefaultBackground()
-        appearance.backgroundColor = .white
+        appearance.backgroundColor = UIColor(named: "goldColor")
         appearance.shadowColor = nil
         appearance.setBackIndicatorImage(backButton, transitionMaskImage: backButton)
         navigationController?.navigationBar.standardAppearance = appearance

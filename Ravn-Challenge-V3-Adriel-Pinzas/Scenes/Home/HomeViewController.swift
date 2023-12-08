@@ -66,9 +66,10 @@ class HomeViewController: UIViewController, InitialProtocols {
     private func setUpNavigationBar() {
         navigationController?.navigationBar.isTranslucent = false
         navigationItem.title = " "
+        navigationController?.navigationBar.tintColor = .black
         let appearance = UINavigationBarAppearance()
         appearance.configureWithDefaultBackground()
-        appearance.backgroundColor = .white
+        appearance.backgroundColor = UIColor(named: "goldColor")
         appearance.shadowColor = nil
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
