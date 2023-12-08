@@ -15,7 +15,7 @@ extension Home {
         let presenter = HomePresenter()
         let networkRechability = NetworkRechabilityManager()
         let router = HomeRouter(navigation: navigation)
-        let interactor = HomeInteractor(presenter: presenter, router: router, homeService: homeService, searchService: searchService, userDefaultsManager: UserDefaultManager(), networkRechabilityManager: networkRechability)
+        let interactor = HomeInteractor(presenter: presenter, router: router, homeService: homeService, searchService: searchService, userDefaultsManager: UserDefaultsManager(), networkRechabilityManager: networkRechability)
         networkRechability.delegate = interactor
         let viewController = HomeViewController(interactor: interactor)
         presenter.delegate = viewController

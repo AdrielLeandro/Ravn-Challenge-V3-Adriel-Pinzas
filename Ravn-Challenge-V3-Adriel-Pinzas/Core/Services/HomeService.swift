@@ -16,7 +16,7 @@ struct DefaultError: Error, Codable {
 
 protocol HomeServiceProtocol {
     typealias launchesResult = Result<[Launch], Error>
-    func fetchLauches(completion: @escaping (launchesResult) -> Void)
+    func fetchLaunches(completion: @escaping (launchesResult) -> Void)
 }
 
 final class HomeService: HomeServiceProtocol {
@@ -26,7 +26,7 @@ final class HomeService: HomeServiceProtocol {
         self.apolloNetwork = apolloNetwork
     }
     
-    func fetchLauches(completion: @escaping (launchesResult) -> Void) {
+    func fetchLaunches(completion: @escaping (launchesResult) -> Void) {
         apolloNetwork.apollo.fetch(query: GetLaunchesQuery(), cachePolicy: .returnCacheDataAndFetch) { result in
             switch result {
             case .success(let graphQLResult):

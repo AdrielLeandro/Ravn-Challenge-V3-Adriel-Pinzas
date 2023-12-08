@@ -16,12 +16,12 @@ protocol HomeInteractorProtocol {
     func didSelect(indexPath: IndexPath)
 }
 
-class HomeInteractor: HomeInteractorProtocol {
+final class HomeInteractor: HomeInteractorProtocol {
     private let presenter: HomePresenterProtocol
     private let router: HomeRouterProtocol
     private let homeService: HomeServiceProtocol
     private let searchService: SearchServiceProtocol
-    private let userDefaultsManager: UserDefaultManagerProtocol
+    private let userDefaultsManager: UserDefaultsManagerProtocol
     private let networkRechabilityManager: NetworkRechabilityManagerProtocol
     private var launches: [Launch]?
     
@@ -29,7 +29,7 @@ class HomeInteractor: HomeInteractorProtocol {
          router: HomeRouterProtocol,
          homeService: HomeServiceProtocol,
          searchService: SearchServiceProtocol,
-         userDefaultsManager: UserDefaultManagerProtocol,
+         userDefaultsManager: UserDefaultsManagerProtocol,
          networkRechabilityManager: NetworkRechabilityManagerProtocol) {
         self.presenter = presenter
         self.router = router
@@ -72,7 +72,7 @@ class HomeInteractor: HomeInteractorProtocol {
     }
     
     private func fetchLaunches() {
-        homeService.fetchLauches { [weak self] result in
+        homeService.fetchLaunches { [weak self] result in
             switch result {
             case .success(let launches):
                 self?.launches = launches
@@ -105,7 +105,8 @@ class HomeInteractor: HomeInteractorProtocol {
 
 extension HomeInteractor: NetworkRechabilityManagerDelegate {
     func networkStatusDidChange(connected: Bool) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
             if connected {
                 self.fetchLaunches()
                 if self.getSavedLaunches().isEmpty {

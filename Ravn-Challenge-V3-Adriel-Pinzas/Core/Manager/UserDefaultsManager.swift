@@ -1,5 +1,5 @@
 //
-//  UserDefaultManager.swift
+//  UserDefaultsManager.swift
 //  Ravn-Challenge-V3-Adriel-Pinzas
 //
 //  Created by Adriel Pinzas on 3/12/23.
@@ -8,13 +8,13 @@
 import Foundation
 
 
-protocol UserDefaultManagerProtocol {
-    func save<T: Encodable>(data: T, key: UserDefaultManager.UserDefaultKeys)
-    func get<T: Codable>(key: UserDefaultManager.UserDefaultKeys) -> T?
+protocol UserDefaultsManagerProtocol {
+    func save<T: Encodable>(data: T, key: UserDefaultsManager.UserDefaultsKeys)
+    func get<T: Codable>(key: UserDefaultsManager.UserDefaultsKeys) -> T?
 }
 
-class UserDefaultManager: UserDefaultManagerProtocol {
-    enum UserDefaultKeys: String {
+final class UserDefaultsManager: UserDefaultsManagerProtocol {
+    enum UserDefaultsKeys: String {
         case launches
     }
     
@@ -22,12 +22,12 @@ class UserDefaultManager: UserDefaultManagerProtocol {
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
     
-    func save<T: Encodable>(data: T, key: UserDefaultKeys) {
+    func save<T: Encodable>(data: T, key: UserDefaultsKeys) {
         let data = try? encoder.encode(data)
         defaults.set(data, forKey: key.rawValue)
     }
     
-    func get<T: Codable>(key: UserDefaultKeys) -> T? {
+    func get<T: Codable>(key: UserDefaultsKeys) -> T? {
         if let data = UserDefaults.standard.data(forKey: key.rawValue),
            let content =  try? decoder.decode(T.self, from: data) {
             return content

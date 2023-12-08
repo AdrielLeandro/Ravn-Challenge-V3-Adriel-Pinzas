@@ -19,6 +19,7 @@ extension ErrorProtocol where Self: UIViewController {
         errorView.configure(errorMessage: message)
         errorView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(errorView)
+        
         NSLayoutConstraint.activate([
             errorView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             errorView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -26,12 +27,13 @@ extension ErrorProtocol where Self: UIViewController {
             errorView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
     }
+    
     func stopError() {
         errorView.removeFromSuperview()
     }
 }
 
-class ErrorView: UIView {
+final class ErrorView: UIView {
     var onTryAgainDidPressed: (() -> Void)?
 
     private lazy var emptyImageView: UIImageView = {

@@ -16,7 +16,7 @@ protocol NetworkRechabilityManagerProtocol {
     var isConnected: Bool { get set }
 }
 
-class NetworkRechabilityManager: NetworkRechabilityManagerProtocol {
+final class NetworkRechabilityManager: NetworkRechabilityManagerProtocol {
     private var pathMonitor: NWPathMonitor
     private var queue: DispatchQueue
     weak var delegate: NetworkRechabilityManagerDelegate?
@@ -41,5 +41,4 @@ class NetworkRechabilityManager: NetworkRechabilityManagerProtocol {
     deinit {
         pathMonitor.cancel()
     }
-    
 }

@@ -14,7 +14,6 @@ extension Home {
             let date: String
         }
         
-        
         var title: String
         var items: [LaunchItem]
     }

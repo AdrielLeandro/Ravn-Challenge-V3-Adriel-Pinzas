@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     
     private let interactor: DetailInteractorProtocol
     private let detailView = DetailView()
@@ -48,6 +48,7 @@ class DetailViewController: UIViewController {
     private func setUpView() {
         detailView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(detailView)
+        
         NSLayoutConstraint.activate([
             detailView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor),

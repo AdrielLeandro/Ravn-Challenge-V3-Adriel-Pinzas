@@ -9,7 +9,7 @@ import UIKit
 
 typealias InitialProtocols = LoadingProtocol & EmptyProtocol & ErrorProtocol
 
-class HomeViewController: UIViewController, InitialProtocols {
+final class HomeViewController: UIViewController, InitialProtocols {
     private let interactor: HomeInteractorProtocol
     
     private lazy var homeNavigationTitleView: HomeNavigationTitleView = {

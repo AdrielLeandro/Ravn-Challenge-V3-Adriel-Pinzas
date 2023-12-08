@@ -31,7 +31,7 @@ extension EmptyProtocol where Self: UIViewController {
     }
 }
 
-class EmptyView: UIView {
+final class EmptyView: UIView {
     lazy var emptyImageView: UIImageView = {
         let image = UIImageView(image: UIImage(named: "emptyImage"))
         image.translatesAutoresizingMaskIntoConstraints = false

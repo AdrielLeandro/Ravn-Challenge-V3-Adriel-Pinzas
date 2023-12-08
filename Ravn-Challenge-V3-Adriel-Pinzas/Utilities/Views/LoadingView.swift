@@ -32,7 +32,7 @@ extension LoadingProtocol where Self: UIViewController {
     }
 }
 
-class LoadingView: UIView {
+final class LoadingView: UIView {
     lazy var loader: UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView()
         loader.translatesAutoresizingMaskIntoConstraints = false

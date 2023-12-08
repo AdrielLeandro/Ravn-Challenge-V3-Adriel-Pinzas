@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailView: UIView {
+final class DetailView: UIView {
     enum Constant {
         static let edgeInsets: UIEdgeInsets = UIEdgeInsets(top: 32, left: 24, bottom: 0, right: 24)
         static let bottomMargin: CGFloat = 24

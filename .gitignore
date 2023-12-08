@@ -1,0 +1,49 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Swift Package Manager
+.build/
+
+# Playgrounds
+*.xcplayground
+
+# Swift Package Manager
+Package.resolved
+
+# SwiftPM Temporary Folder
+.swiftpm/
+
+# AppCode
+.idea/
+
+# Xcode
+*.xcuserstate
+*.xcworkspace/
+xcuserdata/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Code Injection
+.iosInjection/
+
+# Tertiary-level .gitignore
+*.xccheckout
+*.xcscmblueprint
+project.xcworkspace/

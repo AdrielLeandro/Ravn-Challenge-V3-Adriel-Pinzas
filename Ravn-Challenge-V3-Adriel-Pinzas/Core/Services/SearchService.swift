@@ -12,7 +12,6 @@ protocol SearchServiceProtocol {
 }
 
 final class SearchService: SearchServiceProtocol {
-    
     func filterLaunches(_ launches: [Launch], using searchText: String) -> [Launch] {
         let filtered = launches.filter { launch in
             return searchText.isEmpty || launch.missionName.lowercased().range(of: searchText.lowercased()) != nil

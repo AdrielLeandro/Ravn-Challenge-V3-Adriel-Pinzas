@@ -16,7 +16,6 @@ protocol DetailPresenterDelegate: UIViewController {
 }
 
 final class DetailPresenter: DetailPresenterProtocol {
-    
     weak var delegate: DetailPresenterDelegate?
     
     func present(launch: Launch) {

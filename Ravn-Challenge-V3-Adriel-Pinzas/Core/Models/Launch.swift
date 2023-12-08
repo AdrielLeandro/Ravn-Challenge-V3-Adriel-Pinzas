@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Launch: Codable {
+struct Launch: Codable, Equatable {
     let id: String
     let missionName: String
     let launchDate: Date?

@@ -12,7 +12,6 @@ protocol DetailInteractorProtocol {
 }
 
 final class DetailInteractor: DetailInteractorProtocol {
-
     private let presenter: DetailPresenterProtocol
     private let launch: Launch
     
